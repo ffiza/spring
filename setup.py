@@ -1,4 +1,8 @@
-from setuptools import find_packages, setup
+from setuptools import setup
+from setuptools import find_packages
+
 
 setup(name="spring",
-      packages=find_packages())
+      version="1.0.0",
+      author="Federico Iza",
+      packages=["examples", "spring"])
