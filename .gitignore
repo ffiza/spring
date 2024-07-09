@@ -1,2 +1,3 @@
 /.venv
 /spring.egg-info
+/spring/__pycache__
