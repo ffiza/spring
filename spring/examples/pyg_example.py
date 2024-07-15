@@ -13,6 +13,7 @@ class Animation:
     FPS: int = 60
     SPRING_ANGULAR_VEL: float = 2.0
     SPRING_ELONGATION: int = 200
+    DISPLAY_CAPTION: str = "Spring"
 
     def __init__(self) -> None:
         """
@@ -25,7 +26,7 @@ class Animation:
         self.screen = pygame.display.set_mode(
             size=(Animation.SCREEN_WIDTH, Animation.SCREEN_HEIGHT),
             flags=pygame.RESIZABLE, depth=Animation.COLOR_DEPTH)
-        pygame.display.set_caption("Spring Scene")
+        pygame.display.set_caption(Animation.DISPLAY_CAPTION)
 
         self.clock = pygame.time.Clock()
         self.time: float = 0.0
@@ -62,7 +63,7 @@ class Animation:
         Draw the elements on the screen.
         """
 
-        self.spring.draw_pyg(screen=self.screen, color="gold1", lw=2)
+        self.spring.draw_pyg(surface=self.screen, color="gold1", lw=2)
 
     def _update_spring(self) -> None:
         x2 = (Animation.SPRING_ELONGATION + np.cos(

@@ -87,22 +87,22 @@ class Spring:
         ax.plot(self.points[:, 0], self.points[:, 1], lw=lw, color=color)
 
     def draw_pyg(self,
-                 screen: pyg.Surface,
+                 surface: pyg.Surface,
                  color: pyg.Color = pyg.Color(255, 255, 255, 255),
                  lw: int = 1) -> None:
         """
-        Draw the spring on a PyGame screen.
+        Draw the spring on a PyGame surface.
 
         Parameters
         ----------
-        screen : pyg.Surface
-            The screen on which to draw the spring.
+        surface : pyg.Surface
+            The surface on which to draw the spring.
         color : pyg.Color, optional
             The color of the spring. White by default.
         lw : int, optional
             The line width. 1 by default.
         """
-        pyg.draw.lines(surface=screen,
+        pyg.draw.lines(surface=surface,
                        color=color,
                        closed=False,
                        points=self.points,
