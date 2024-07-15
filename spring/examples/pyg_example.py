@@ -2,7 +2,7 @@ import pygame
 import sys
 import numpy as np
 
-from spring.spring import Spring
+from ..spring import Spring
 
 
 class Animation:

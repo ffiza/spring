@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
 
-from spring.spring import Spring
+from ..spring import Spring
 
 
 def plot_example() -> None:
