@@ -40,12 +40,26 @@ class Spring:
 
     def set_extremes(self, xy1: tuple[float, float],
                      xy2: tuple[float, float]) -> None:
+        """
+        Set the location of the origin (`xy1`) and the tip (`xy2`) of the
+        spring.
+
+        Parameters
+        ----------
+        xy1 : tuple[float, float]
+            The location of the origin of the spring.
+        xy2 : tuple[float, float]
+            The location of the tip of the spring.
+        """
         self.xy1 = np.array(xy1)
         self.xy2 = np.array(xy2)
         self.length = np.linalg.norm(self.xy2 - self.xy1)
         self._calculate_points()
 
     def _calculate_points(self) -> None:
+        """
+        Calculates all the points needed to draw the spring.
+        """
         n_points = 3 + 4 * self.n_loops
 
         # Spring properties
